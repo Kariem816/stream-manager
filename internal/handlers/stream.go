@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/Kariem816/webrtc-control/internal/msgs"
+	"github.com/Kariem816/stream-manager/internal/msgs"
 	"github.com/gorilla/websocket"
 )
 
@@ -29,7 +29,7 @@ func Stream(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	buf, err := msgs.HandshakeAck{StreamID: uint16(streamId)}.Buf()
+	buf, err := msgs.MsgStreamID{StreamID: uint16(streamId)}.Buf()
 	if err != nil {
 		log.Print("buf:", err)
 		return

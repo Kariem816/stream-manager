@@ -3,7 +3,7 @@ package handlers
 import (
 	"net/http"
 
-	"github.com/Kariem816/webrtc-control/config"
+	"github.com/Kariem816/stream-manager/config"
 )
 
 func Secure(w http.ResponseWriter, r *http.Request) {
