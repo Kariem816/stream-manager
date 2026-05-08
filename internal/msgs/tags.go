@@ -9,11 +9,3 @@ const (
 	MSG_CANDIDATE
 	MSG_LEN
 )
-
-type MessageError uint8
-
-const (
-	ErrNil MessageError = iota
-	ErrInvalidLen
-	ErrInvalidType
-)
